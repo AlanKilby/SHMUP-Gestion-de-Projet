@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6118133573212656305}
   - component: {fileID: 6118133573212656307}
   - component: {fileID: 6118133573212656306}
+  - component: {fileID: 4498267254586425651}
+  - component: {fileID: 9115628530600461506}
   m_Layer: 8
   m_Name: Enemy_Skull
   m_TagString: Alien
@@ -144,3 +146,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb155c37f74ff6f4f8ceb6483d4a3175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4498267254586425651
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118133573212656311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f08ede2057ee45a47833a72fe33b2f51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9115628530600461506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118133573212656311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9716911f04069745bedc4536b434fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  movementTime: 1

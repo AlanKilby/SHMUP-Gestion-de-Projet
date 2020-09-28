@@ -5,15 +5,21 @@ using UnityEngine;
 public class projectile_script : MonoBehaviour
 {
     public float speed;
-
+    public bool isPlayer;
+    public float destructionTime;
 
     private void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, destructionTime);
     }
     private void Update()
     {
+        if(isPlayer)
         transform.Translate(transform.up * speed * Time.deltaTime);
+
+        if(!isPlayer)
+            transform.Translate(transform.up * -speed * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
