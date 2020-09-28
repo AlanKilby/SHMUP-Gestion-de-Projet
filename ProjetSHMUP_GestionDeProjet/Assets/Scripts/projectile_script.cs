@@ -6,6 +6,11 @@ public class projectile_script : MonoBehaviour
 {
     public float speed;
 
+
+    private void Start()
+    {
+        Destroy(gameObject, 5);
+    }
     private void Update()
     {
         transform.Translate(transform.up * speed * Time.deltaTime);
