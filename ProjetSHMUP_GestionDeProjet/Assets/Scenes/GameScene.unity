@@ -20765,6 +20765,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbbbfb00dc88594abd20fcaa226de3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  speed: 0
+>>>>>>> main
 --- !u!212 &1650012752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20845,7 +20849,10 @@ GameObject:
   - component: {fileID: 1859094658}
   - component: {fileID: 1859094657}
   - component: {fileID: 1859094656}
+<<<<<<< HEAD
   - component: {fileID: 1859094659}
+=======
+>>>>>>> main
   m_Layer: 0
   m_Name: MainLevel
   m_TagString: Untagged
@@ -21206,6 +21213,7 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+<<<<<<< HEAD
 --- !u!114 &1859094659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21219,3 +21227,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.3
+=======
+>>>>>>> main
