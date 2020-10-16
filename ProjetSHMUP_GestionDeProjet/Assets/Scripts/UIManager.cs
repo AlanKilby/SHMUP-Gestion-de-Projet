@@ -21,11 +21,11 @@ public class UIManager : MonoBehaviour
     {
         if(player.hp <= 99)
         {
-            hp.text = "HP: " + player.hp;
+            hp.text = "" + player.hp;
         }
         else if(player.hp >= 99)
         {
-            hp.text = "HP: 99+";
+            hp.text = "99+";
         }
         score.text = "Score: " + ScoreStore.score;
     }

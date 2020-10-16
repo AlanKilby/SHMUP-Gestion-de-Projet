@@ -25,15 +25,14 @@ public class alien_script : MonoBehaviour
             Debug.Log("HIT");
             hp--;    
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         if (collision.gameObject.CompareTag("Player"))
         {
             AlienDeath();
         }
     }
+
+    
 
     public void AlienDeath()
     {
