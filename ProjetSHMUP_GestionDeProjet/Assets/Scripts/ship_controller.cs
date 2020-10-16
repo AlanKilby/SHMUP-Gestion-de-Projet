@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ship_controller : MonoBehaviour
 {
@@ -19,9 +21,12 @@ public class ship_controller : MonoBehaviour
 
     public AudioSource playerAudio;
 
+    public MenuPause menuPause;
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
+
         rb = GetComponent<Rigidbody2D>();
         ScoreStore.score = 0;
         hp = 3;
@@ -74,13 +79,32 @@ public class ship_controller : MonoBehaviour
         {
             hp--;
         }
+
+        if (other.gameObject.CompareTag("EndGame"))
+        {
+            Time.timeScale = 0f;
+
+            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 40, 80, 40), "Play Again"))
+            {
+                Time.timeScale = 1f;
+                SceneManager.LoadScene("Level1");
+            }
+
+            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quitter"))
+            {
+                Time.timeScale = 1f;
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
     }
     
 
     public void Death()
     {
         Instantiate(explosion, new Vector3(transform.position.x,transform.position.y), Quaternion.identity);
+        menuPause.EnPause2 = true;
         Destroy(gameObject);
+        
     }
 }
 

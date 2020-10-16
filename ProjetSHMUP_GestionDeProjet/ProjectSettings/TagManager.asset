@@ -9,6 +9,8 @@ TagManager:
   - Default
   - Detector
   - enemy_bullet
+  - Wall
+  - EndGame
   layers:
   - Default
   - TransparentFX

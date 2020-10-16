@@ -33,6 +33,20 @@ public class projectile_script : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("TouchedWall");
+            Destroy(gameObject);
+
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+
+
 
 }

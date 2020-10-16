@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8028303683794643298}
   - component: {fileID: 8028303683794643301}
   - component: {fileID: 8028303683794643299}
+  - component: {fileID: 2165818018302111706}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: bullet
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2fe2d0930e3c60b45ba4abc2ea1e2760, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,3 +116,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0006227046, y: -0.062405765}
   m_Size: {x: 0.43196842, y: 0.5639261}
   m_Direction: 0
+--- !u!50 &2165818018302111706
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028303683794643303}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 5

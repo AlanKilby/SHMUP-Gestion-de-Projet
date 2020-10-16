@@ -133,6 +133,8 @@ MonoBehaviour:
   horizontalMove: 0
   hp: 0
   explosion: {fileID: 7407982262062706891, guid: 96a5279df674d1147a4783d5d7f9d59e, type: 3}
+  playerAudio: {fileID: 0}
+  sprite: {fileID: 7602876665210892576}
 --- !u!95 &8760899632357410832
 Animator:
   serializedVersion: 3
