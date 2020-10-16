@@ -5,7 +5,12 @@ using UnityEngine;
 public class alien_script : MonoBehaviour
 {
     public float hp;
+    public ParticleSystem explosion;
 
+    private void Start()
+    {
+
+    }
     private void Update()
     {
         if(hp <= 0)
@@ -32,6 +37,9 @@ public class alien_script : MonoBehaviour
 
     public void AlienDeath()
     {
+        Instantiate(explosion,new Vector3(transform.position.x,transform.position.y),Quaternion.identity);
+        ScoreStore.score++;
         Destroy(gameObject);
+        
     }
 }

@@ -131,6 +131,8 @@ MonoBehaviour:
   projectile: {fileID: 8028303683794643303, guid: d1030b461f64d8942a0ac4a5d8a0fcf5, type: 3}
   shotPoint: {fileID: 7855393021175058941}
   horizontalMove: 0
+  hp: 0
+  explosion: {fileID: 7407982262062706891, guid: 96a5279df674d1147a4783d5d7f9d59e, type: 3}
 --- !u!95 &8760899632357410832
 Animator:
   serializedVersion: 3

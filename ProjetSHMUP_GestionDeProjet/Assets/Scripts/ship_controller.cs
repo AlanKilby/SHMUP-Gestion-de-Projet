@@ -14,10 +14,14 @@ public class ship_controller : MonoBehaviour
     public float horizontalMove;
 
     public float hp;
+
+    public ParticleSystem explosion;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ScoreStore.score = 0;
+        hp = 3;
     }
 
     // Update is called once per frame
@@ -70,6 +74,7 @@ public class ship_controller : MonoBehaviour
 
     public void Death()
     {
+        Instantiate(explosion, new Vector3(transform.position.x,transform.position.y), Quaternion.identity);
         Destroy(gameObject);
     }
 }

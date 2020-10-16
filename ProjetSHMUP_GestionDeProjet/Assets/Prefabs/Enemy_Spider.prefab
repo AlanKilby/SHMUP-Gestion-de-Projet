@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  explosion: {fileID: 7407982262062706891, guid: 96a5279df674d1147a4783d5d7f9d59e, type: 3}
 --- !u!95 &4828756108862078860
 Animator:
   serializedVersion: 3
