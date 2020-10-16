@@ -10,6 +10,8 @@ public class Spider_AI : MonoBehaviour
     private float timeHolder;
     private bool isGoingRight = true;
 
+    public AudioSource shoot;
+
     public GameObject projectile;
     public Transform shotPoint;
 

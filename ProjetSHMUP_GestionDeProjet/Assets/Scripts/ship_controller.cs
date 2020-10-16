@@ -16,6 +16,9 @@ public class ship_controller : MonoBehaviour
     public float hp;
 
     public ParticleSystem explosion;
+
+    public AudioSource playerAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,8 @@ public class ship_controller : MonoBehaviour
 
         if (Input.GetButtonDown("shoot"))
         {
+            playerAudio.Play();
+
             Instantiate(projectile, shotPoint.position, transform.rotation);
         }
 
