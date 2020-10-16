@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb155c37f74ff6f4f8ceb6483d4a3175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
 --- !u!95 &4828756108862078860
 Animator:
   serializedVersion: 3
@@ -179,11 +180,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  movementTime: 0.5
+  movementTime: 1
   projectile: {fileID: 7900648249095672758, guid: 8874666e7ff3b70449b5838bc066f38f, type: 3}
   shotPoint: {fileID: 1487780139127006349}
   detectPlayer: 0
   detectionRadius: 8
+  timer: 0.3
+  timerHolder: 0
 --- !u!1 &3875952509725519207
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3875952509725519207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: -0.002, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123926452564586148}

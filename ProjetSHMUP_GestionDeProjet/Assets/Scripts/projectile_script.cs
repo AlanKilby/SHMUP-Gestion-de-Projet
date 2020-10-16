@@ -24,7 +24,12 @@ public class projectile_script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Alien"))
+        if (collision.gameObject.CompareTag("Alien") && isPlayer)
+        {
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("Player") && !isPlayer)
         {
             Destroy(gameObject);
         }

@@ -17,17 +17,21 @@ public class Spider_AI : MonoBehaviour
     public bool detectPlayer = false;
     public float detectionRadius;
 
+    public float timer = 1.5f;
+    public float timerHolder;
+
     // Start is called before the first frame update
     void Start()
     {
         timeHolder = movementTime;
+        timerHolder = timer;
     }
 
     // Update is called once per frame
     void Update()
     {
         detectPlayer = Physics2D.OverlapCircle(gameObject.transform.position, detectionRadius, LayerMask.GetMask("Player"));
-
+        timer -= Time.deltaTime;
         if (isGoingRight && movementTime > 0)
         {
             transform.position += Vector3.right * movementSpeed * Time.deltaTime;
@@ -45,8 +49,12 @@ public class Spider_AI : MonoBehaviour
         {
             isGoingRight = false;
             movementTime = timeHolder;
-            if(detectPlayer)
+            if (detectPlayer && timer <= 0)
+            {
+                timer = timerHolder;
                 Instantiate(projectile, shotPoint.position, transform.rotation);
+
+            }
 
 
         }
@@ -55,8 +63,13 @@ public class Spider_AI : MonoBehaviour
             isGoingRight = true;
             movementTime = timeHolder;
 
-            if (detectPlayer)
+            if (detectPlayer && timer <= 0)
+            {
+                timer = timerHolder;
                 Instantiate(projectile, shotPoint.position, transform.rotation);
+                
+            }
+                
 
         }
 

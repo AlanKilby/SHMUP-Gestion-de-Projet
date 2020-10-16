@@ -12,6 +12,8 @@ public class ship_controller : MonoBehaviour
     public Transform shotPoint;
 
     public float horizontalMove;
+
+    public float hp;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,14 +46,31 @@ public class ship_controller : MonoBehaviour
         {
             Instantiate(projectile, shotPoint.position, transform.rotation);
         }
+
+
+        if(hp <= 0)
+        {
+            Death();
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Alien"))
         {
-            Destroy(gameObject);
+            hp--;
         }
+
+        if (other.gameObject.CompareTag("enemy_bullet"))
+        {
+            hp--;
+        }
+    }
+    
+
+    public void Death()
+    {
+        Destroy(gameObject);
     }
 }
 

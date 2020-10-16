@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - Default
   - Detector
+  - enemy_bullet
   layers:
   - Default
   - TransparentFX

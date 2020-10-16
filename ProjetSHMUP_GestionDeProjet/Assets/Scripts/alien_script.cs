@@ -4,12 +4,34 @@ using UnityEngine;
 
 public class alien_script : MonoBehaviour
 {
+    public float hp;
+
+    private void Update()
+    {
+        if(hp <= 0)
+        {
+            AlienDeath();
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("bullet"))
         {
             Debug.Log("HIT");
-            Destroy(gameObject);    
+            hp--;    
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AlienDeath();
+        }
+    }
+
+    public void AlienDeath()
+    {
+        Destroy(gameObject);
     }
 }
