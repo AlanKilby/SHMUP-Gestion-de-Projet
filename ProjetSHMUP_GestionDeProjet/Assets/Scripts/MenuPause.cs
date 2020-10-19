@@ -36,7 +36,7 @@ public class MenuPause : MonoBehaviour
         if(EnPause)
         {
 
-            if(GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2-20,80,40),"Continuer"))
+            if(GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2-20,80,40),"Continue"))
             {
                 EnPause = false;
                 Time.timeScale = 1f;
@@ -47,7 +47,7 @@ public class MenuPause : MonoBehaviour
                 SceneManager.LoadScene("Level1");
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quitter"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quit"))
             {
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenu");
@@ -64,7 +64,7 @@ public class MenuPause : MonoBehaviour
 
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quitter"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quit"))
             {
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenu");

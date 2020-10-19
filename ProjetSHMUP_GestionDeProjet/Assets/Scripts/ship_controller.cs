@@ -29,7 +29,7 @@ public class ship_controller : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         ScoreStore.score = 0;
-        hp = 3;
+        hp = 5;
     }
 
     // Update is called once per frame
@@ -90,7 +90,7 @@ public class ship_controller : MonoBehaviour
                 SceneManager.LoadScene("Level1");
             }
 
-            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quitter"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 40, Screen.height / 2 + 100, 80, 40), "Quit"))
             {
                 Time.timeScale = 1f;
                 SceneManager.LoadScene("MainMenu");

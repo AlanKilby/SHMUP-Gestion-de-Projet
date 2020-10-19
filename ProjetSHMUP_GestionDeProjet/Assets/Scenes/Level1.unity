@@ -618,7 +618,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &548016716
 RectTransform:
@@ -4223,6 +4223,10 @@ PrefabInstance:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 2026091703}
+    - target: {fileID: 3118428424082059738, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
+      propertyPath: detectionRadius
+      value: 3.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
 --- !u!4 &1702310126 stripped
@@ -4369,9 +4373,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1511829035}
     m_Modifications:
+    - target: {fileID: 375164955466792816, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 375164955466792818, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375164955466792819, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375164955466792819, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 375164955466792846, guid: c5e8b23d434000e4db690b28f5e7f263, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19438,7 +19454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602876665210892577, guid: b9935b45c89286e46a36718aa326217b, type: 3}
       propertyPath: hp
-      value: 3
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7602876665210892577, guid: b9935b45c89286e46a36718aa326217b, type: 3}
       propertyPath: soundList.Array.data[0]
